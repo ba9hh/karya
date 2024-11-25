@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+
+@font-face {
+    font-family: calibri;
+    src: url(./assets/fonts/calibriRegular.ttf);
+ }
+ .calibri{
+    font-family: calibri;
+ }
+ @font-face {
+    font-family: crimsontext;
+    src: url(./assets/fonts/CrimsonText-Regular.ttf);
+ }
+ .crimsonText{
+    font-family: crimsontext;
+ }
+ @font-face {
+    font-family: calibriBold;
+    src: url(./assets/fonts/calibri-bold.ttf);
+ }
+ .calibriBold{
+    font-family: calibriBold;
+ }
+ .searchAnimation{
+   animation :bounce 2s;
+ }
+ @keyframes bounce{
+   25%{
+      transform: translateY(-200px)
+   }
+   50%{
+      transform: translateY(0px)
+   }
+   75%{
+      transform: translateY(-20px)
+
+   }
+   100%{
+      transform: translateY(0px)
+
+   }
+ }
+ .no-arrows::-webkit-outer-spin-button,
+.no-arrows::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+@tailwind utilities;
