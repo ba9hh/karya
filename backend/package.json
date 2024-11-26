@@ -1,4 +1,11 @@
 {
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "A backend server for my app",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix ./client && npm run build --prefix ./client && npm install"
+  },
   "dependencies": {
     "axios": "^1.7.7",
     "bcryptjs": "^2.4.3",
