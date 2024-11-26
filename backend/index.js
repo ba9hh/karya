@@ -12,6 +12,7 @@ const bodyParser = require('body-parser');
 const houseRoutes = require('./routes/houseRoutes');
 const userRoutes = require('./routes/userRoutes');
 const nodemailer = require('nodemailer');
+const path = require('path');
 
 
 if (!fs.existsSync('uploads')) {
@@ -26,6 +27,9 @@ const app = express()
 app.use(cookieParser());
 app.use(express.json());
 
+const frontendPath = path.join(__dirname, '/client/dist');
+app.use(express.static(frontendPath));
+
 
 app.use((req, res, next) => {
   res.setHeader("Cross-Origin-Opener-Policy", "same-origin-allow-popups");
@@ -33,8 +37,12 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '/client/dist/index.html'));
+});
+
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: '*',
   credentials: true,
 }));
 
