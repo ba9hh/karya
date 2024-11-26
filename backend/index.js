@@ -27,6 +27,8 @@ const app = express()
 app.use(cookieParser());
 app.use(express.json());
 
+const PORT = process.env.PORT || 3000;
+
 const frontendPath = path.join(__dirname, '/client/dist');
 app.use(express.static(frontendPath));
 
@@ -62,8 +64,8 @@ mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     console.log('App connected to database');
-    app.listen(3000, () => {
-      console.log("App is listening to port: 3000");
+    app.listen(PORT, () => {
+      console.log("App is listening to port: ");
     });
   })
   .catch((error) => {
