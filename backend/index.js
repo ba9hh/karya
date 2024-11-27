@@ -64,15 +64,15 @@ mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     console.log('App connected to database');
-    app.listen(PORT, () => {
-      console.log("App is listening to port: ");
-    });
+    
   })
   .catch((error) => {
     console.log(error);
   });
 
-
+  app.listen(PORT, () => {
+    console.log("App is listening to port: ");
+  });
 
 app.use('/uploads', express.static('uploads'));
 
