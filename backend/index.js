@@ -28,6 +28,7 @@ app.use(cookieParser());
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
+const MONGO_URI = process.env.MONGO_URI;
 
 const frontendPath = path.join(__dirname, '/client/dist');
 app.use(express.static(frontendPath));
@@ -61,7 +62,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(MONGO_URI)
   .then(() => {
     console.log('App connected to database');
     
