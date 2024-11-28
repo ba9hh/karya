@@ -28,7 +28,7 @@ app.use(cookieParser());
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
-const MONGO_URI = process.env.MONGO_URI;
+const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://ezdin:test123@karya.efcifes.mongodb.net/House?retryWrites=true&w=majority&appName=karya";
 
 const frontendPath = path.join(__dirname, '/client/dist');
 app.use(express.static(frontendPath));
