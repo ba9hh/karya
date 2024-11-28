@@ -22,7 +22,7 @@ const ListOfHouses = () => {
   const toggleLike = async (houseId) => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/toggle-like",
+        "https://karya-kpet.onrender.com/api/toggle-like",
         { houseId }
       );
       if (response.data.success) {
@@ -49,7 +49,7 @@ const ListOfHouses = () => {
     const fetchLikedPosts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/get-liked-posts",
+          "https://karya-kpet.onrender.com/api/get-liked-posts",
           {
             withCredentials: true, // Ensure the token is sent in the request
           }
@@ -136,19 +136,19 @@ const ListOfHouses = () => {
                 <div className="grid grid-cols-2 gap-1">
                   <img
                     className="w-full h-44 border  rounded-xl object-cover"
-                    src={`http://localhost:3000/${house.images[0]}`}
+                    src={`https://karya-kpet.onrender.com/${house.images[0]}`}
                   />
                   <img
                     className="w-full h-44 border  rounded-xl object-cover"
-                    src={`http://localhost:3000/${house.images[1]}`}
+                    src={`https://karya-kpet.onrender.com/${house.images[1]}`}
                   />
                   <img
                     className="w-full h-44 border  rounded-xl object-cover"
-                    src={`http://localhost:3000/${house.images[2]}`}
+                    src={`https://karya-kpet.onrender.com/${house.images[2]}`}
                   />
                   <img
                     className="w-full h-44 border  rounded-xl object-cover"
-                    src={`http://localhost:3000/${house.images[3]}`}
+                    src={`https://karya-kpet.onrender.com/${house.images[3]}`}
                   />
                 </div>
               </Link>

@@ -62,7 +62,7 @@ const Account = () => {
     const fetchLikedPosts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/user-liked-houses",
+          "https://karya-kpet.onrender.com/api/user-liked-houses",
           {
             withCredentials: true, // Ensure the token is sent in the request
           }
@@ -82,7 +82,7 @@ const Account = () => {
     const fetchUserPosts = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/user-posts`
+          `https://karya-kpet.onrender.com/api/user-posts`
         );
         const { visiblePosts, invisiblePosts } = response.data;
         setUserVisiblePosts(visiblePosts);
@@ -128,7 +128,7 @@ const Account = () => {
 
     try {
       const response = await axios.put(
-        "http://localhost:3000/api/update-user",
+        "https://karya-kpet.onrender.com/api/update-user",
         {
           username,
           phoneNumber,
@@ -145,7 +145,7 @@ const Account = () => {
   const updatePostVisibility = async (postId, newVisibility) => {
     try {
       const response = await axios.put(
-        `http://localhost:3000/api/house/${postId}/visibility`,
+        `https://karya-kpet.onrender.com/api/house/${postId}/visibility`,
         {
           visibility: newVisibility,
         }
@@ -178,7 +178,7 @@ const Account = () => {
   const toggleLike = async (houseId) => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/toggle-like",
+        "https://karya-kpet.onrender.com/api/toggle-like",
         { houseId }
       );
       console.log(response.data);
@@ -197,7 +197,7 @@ const Account = () => {
   const deleteHouse = async (postId) => {
     try {
       const response = await axios.delete(
-        `http://localhost:3000/api/house/${postId}`
+        `https://karya-kpet.onrender.com/api/house/${postId}`
       );
       if (response.status === 200) {
         setUserVisiblePosts((prevVisiblePosts) =>
@@ -217,7 +217,7 @@ const Account = () => {
   };
   const deleteAccount = async () => {
     try {
-      const response = await axios.delete("http://localhost:3000/api/user", {
+      const response = await axios.delete("https://karya-kpet.onrender.com/api/user", {
         withCredentials: true,
       });
 
@@ -259,7 +259,7 @@ const Account = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/auth/upload-profile-pic",
+        "https://karya-kpet.onrender.com/api/auth/upload-profile-pic",
         formData,
         {
           headers: {
@@ -278,7 +278,7 @@ const Account = () => {
 
   const updatePassword = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/api/update-password", {
+      const response = await axios.post("https://karya-kpet.onrender.com/api/update-password", {
         currentPassword,
         newPassword,
       });
@@ -408,19 +408,19 @@ const Account = () => {
                       <div className="grid grid-cols-2 gap-1 mb-3">
                         <img
                           className="w-full h-36 border  rounded-xl object-cover"
-                          src={`http://localhost:3000/${post.images[0]}`}
+                          src={`https://karya-kpet.onrender.com/${post.images[0]}`}
                         />
                         <img
                           className="w-full h-36 border  rounded-xl object-cover"
-                          src={`http://localhost:3000/${post.images[1]}`}
+                          src={`https://karya-kpet.onrender.com/${post.images[1]}`}
                         />
                         <img
                           className="w-full h-36 border  rounded-xl object-cover"
-                          src={`http://localhost:3000/${post.images[2]}`}
+                          src={`https://karya-kpet.onrender.com/${post.images[2]}`}
                         />
                         <img
                           className="w-full h-36 border  rounded-xl object-cover"
-                          src={`http://localhost:3000/${post.images[3]}`}
+                          src={`https://karya-kpet.onrender.com/${post.images[3]}`}
                         />
                       </div>
                       <h1 className="text-center text-lg font-normal">
@@ -483,19 +483,19 @@ const Account = () => {
                       <div className="grid grid-cols-2 gap-1 mb-3">
                         <img
                           className="w-full h-36 border  rounded-xl object-cover"
-                          src={`http://localhost:3000/${post.images[0]}`}
+                          src={`https://karya-kpet.onrender.com/${post.images[0]}`}
                         />
                         <img
                           className="w-full h-36 border  rounded-xl object-cover"
-                          src={`http://localhost:3000/${post.images[1]}`}
+                          src={`https://karya-kpet.onrender.com/${post.images[1]}`}
                         />
                         <img
                           className="w-full h-36 border  rounded-xl object-cover"
-                          src={`http://localhost:3000/${post.images[2]}`}
+                          src={`https://karya-kpet.onrender.com/${post.images[2]}`}
                         />
                         <img
                           className="w-full h-36 border  rounded-xl object-cover"
-                          src={`http://localhost:3000/${post.images[3]}`}
+                          src={`https://karya-kpet.onrender.com/${post.images[3]}`}
                         />
                       </div>
                       <h1 className="text-center text-lg font-normal">
@@ -553,19 +553,19 @@ const Account = () => {
                       <div className="grid grid-cols-2 gap-1 mb-3">
                         <img
                           className="w-full h-36 border  rounded-xl object-cover"
-                          src={`http://localhost:3000/${house.images[0]}`}
+                          src={`https://karya-kpet.onrender.com/${house.images[0]}`}
                         />
                         <img
                           className="w-full h-36 border  rounded-xl object-cover"
-                          src={`http://localhost:3000/${house.images[1]}`}
+                          src={`https://karya-kpet.onrender.com/${house.images[1]}`}
                         />
                         <img
                           className="w-full h-36 border  rounded-xl object-cover"
-                          src={`http://localhost:3000/${house.images[2]}`}
+                          src={`https://karya-kpet.onrender.com/${house.images[2]}`}
                         />
                         <img
                           className="w-full h-36 border  rounded-xl object-cover"
-                          src={`http://localhost:3000/${house.images[3]}`}
+                          src={`https://karya-kpet.onrender.com/${house.images[3]}`}
                         />
                       </div>
                     </Link>

@@ -67,7 +67,7 @@ const HouseDetails = () => {
     const fetchHouse = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/house/${id}`
+          `https://karya-kpet.onrender.com/api/house/${id}`
         );
         setHouse(response.data); // Set the house state with the fetched data
       } catch (err) {
@@ -80,7 +80,7 @@ const HouseDetails = () => {
   const fetchUserDetails = async (userId) => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/user/${userId}`
+        `https://karya-kpet.onrender.com/api/user/${userId}`
       );
       setUser({
         name: response.data.name,
@@ -117,7 +117,7 @@ const HouseDetails = () => {
             .map((image, index) => (
               <img
                 key={index}
-                src={`http://localhost:3000/${image}`}
+                src={`https://karya-kpet.onrender.com/${image}`}
                 alt={`House ${index + 1}`}
                 className="w-full border object-cover cursor-pointer"
                 onClick={() => handleImageClick(image)}
@@ -209,7 +209,7 @@ const HouseDetails = () => {
             .map((image, index) => (
               <img
                 key={index + Math.ceil(house.images.length / 2)}
-                src={`http://localhost:3000/${image}`}
+                src={`https://karya-kpet.onrender.com/${image}`}
                 alt={`House ${index + Math.ceil(house.images.length / 2) + 1}`}
                 className="w-full border object-cover cursor-pointer"
                 onClick={() => handleImageClick(image)}
@@ -270,7 +270,7 @@ const HouseDetails = () => {
         >
           <div className="relative flex items-center justify-center">
             <img
-              src={`http://localhost:3000/${selectedImage}`}
+              src={`https://karya-kpet.onrender.com/${selectedImage}`}
               alt="Enlarged House"
               className="max-w-[80%] max-h-[80%] border  "
             />

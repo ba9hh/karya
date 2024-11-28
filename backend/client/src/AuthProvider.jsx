@@ -14,7 +14,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     // Check for the authToken cookie by sending a request to the backend
     axios
-      .get("http://localhost:3000/api/validateToken", { withCredentials: true })
+      .get("https://karya-kpet.onrender.com/api/validateToken", { withCredentials: true })
       .then((response) => {
         setIsAuthenticated(true);
         setUser(response.data.user);
@@ -28,7 +28,7 @@ const AuthProvider = ({ children }) => {
 
   const handleRegister = (credentials) => {
     axios
-      .post("http://localhost:3000/api/register", credentials, {
+      .post("https://karya-kpet.onrender.com/api/register", credentials, {
         withCredentials: true,
       })
       .then((response) => {
@@ -44,7 +44,7 @@ const AuthProvider = ({ children }) => {
 
   const handleLogin = (credentials) => {
     axios
-      .post("http://localhost:3000/api/login", credentials, {
+      .post("https://karya-kpet.onrender.com/api/login", credentials, {
         withCredentials: true,
       })
       .then((response) => {
@@ -63,7 +63,7 @@ const AuthProvider = ({ children }) => {
     
       // Send the token to your backend for validation
       const response = await axios.post(
-        "http://localhost:3000/api/auth/google",
+        "https://karya-kpet.onrender.com/api/auth/google",
         { token: credential },
         { withCredentials: true }
          
@@ -79,7 +79,7 @@ const AuthProvider = ({ children }) => {
   
   const handleLogout = () => {
     axios
-      .post("http://localhost:3000/api/logout", {}, { withCredentials: true })
+      .post("https://karya-kpet.onrender.com/api/logout", {}, { withCredentials: true })
       .then(() => {
         setIsAuthenticated(false);
         setUser(null);

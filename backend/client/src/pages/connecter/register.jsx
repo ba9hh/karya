@@ -36,7 +36,7 @@ const Register = () => {
   };
   const sendVerificationCode = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/api/send-verification", { email });
+      const response = await axios.post("https://karya-kpet.onrender.com/api/send-verification", { email });
       if (response.data.success) {
         setVerificationCode(response.data.code); // Set the code received from the backend
         setIsVerificationSent(true);
