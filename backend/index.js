@@ -62,7 +62,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 mongoose
-  .connect(MONGO_URI)
+  .connect("mongodb+srv://ezdin:test123@karya.efcifes.mongodb.net/House?retryWrites=true&w=majority&appName=karya")
   .then(() => {
     console.log('App connected to database');
     
