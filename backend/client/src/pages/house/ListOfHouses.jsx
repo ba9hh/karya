@@ -68,8 +68,8 @@ const ListOfHouses = () => {
   const fetchHouses = async (page) => {
     try {
       const endpoint = user
-        ? `http://localhost:3000/api/houses-to-user?page=${page}&limit=6`
-        : `http://localhost:3000/api/houses?page=${page}&limit=6`;
+        ? `https://karya-kpet.onrender.com//api/houses-to-user?page=${page}&limit=6`
+        : `https://karya-kpet.onrender.com//api/houses?page=${page}&limit=6`;
 
       const response = await axios.get(endpoint);
       const newHouses = response.data;
