@@ -34,7 +34,7 @@ const AddNumber = ({onClose}) => {
     
         try {
           const response = await axios.put(
-            "http://localhost:3000/api/update-user-number",
+            "https://karya-kpet.onrender.com/api/update-user-number",
             {
               phoneNumber,
             }
