@@ -15,7 +15,7 @@ function App() {
     "739869680076-jlv9amicing7jf86gasmar79v2hel8vb.apps.googleusercontent.com";
   console.log(clientId);
   return (
-    <GoogleOAuthProvider clientId={clientId}>
+    <GoogleOAuthProvider clientId={/*clientId*/"739869680076-jlv9amicing7jf86gasmar79v2hel8vb.apps.googleusercontent.com"}>
       <AuthProvider>
         <NavBar />
         <Routes>

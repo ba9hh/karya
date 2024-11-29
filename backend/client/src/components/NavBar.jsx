@@ -121,7 +121,7 @@ const NavBar = () => {
               <img
                 src={user.profilePic.startsWith("http") 
                   ? user.profilePic 
-                  : `http://localhost:3000${user.profilePic}`}
+                  : `https://karya-kpet.onrender.com${user.profilePic}`}
                 alt="Profile"
                 style={{ borderRadius: '50%', width: '30px', height: '30px' }}
               />
