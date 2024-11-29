@@ -124,7 +124,7 @@ const googleLogin = async (req, res) => {
     }
 
     // Generate a JWT token for the user
-    const jwtToken = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
+    const jwtToken = jwt.sign({ userId: user._id }, /*process.env.JWT_SECRET*/"Secret", {
       expiresIn: '7d', // Token is valid for 7 days
     });
 
