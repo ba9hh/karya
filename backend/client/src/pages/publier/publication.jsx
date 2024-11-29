@@ -138,7 +138,7 @@ const Publication = () => {
         }
         try {
           const response = await axios.post(
-            "http://localhost:3000/api/house",
+            "https://karya-kpet.onrender.com/api/house",
             formData,
             {
               headers: {

@@ -15,7 +15,7 @@ const ModifierHouse = () => {
     const fetchPost = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/post/${id}`
+          `https://karya-kpet.onrender.com/api/post/${id}`
         );
         setHouse(response.data); // Set the house state with the fetched data
       } catch (err) {
@@ -196,7 +196,7 @@ const ModifierHouse = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:3000/api/house/${id}`,
+        `https://karya-kpet.onrender.com/api/house/${id}`,
         formData,
         {
           headers: {
@@ -304,7 +304,7 @@ const ModifierHouse = () => {
               {Array.isArray(images) && images.map((image, index) => (
                 <div key={index} className="relative m-2">
                   <img
-                    src={`http://localhost:3000/${image}`}
+                    src={`https://karya-kpet.onrender.com/${image}`}
                      alt={`House image ${index + 1}`} 
                     
                     className="w-32 h-32 object-cover"
