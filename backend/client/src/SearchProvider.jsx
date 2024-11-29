@@ -21,7 +21,7 @@ const SearchProvider = ({ children }) => {
     setFilters(searchFilters);
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/houses-filter",
+        "https://karya-kpet.onrender.com/api/houses-filter",
         searchFilters
       );
       setResults(response.data);
@@ -38,7 +38,7 @@ const SearchProvider = ({ children }) => {
     setFiltersv2(searchFilters);
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/houses-multiple-filter",
+        "https://karya-kpet.onrender.com/api/houses-multiple-filter",
         searchFilters
       );
       setResults(response.data);
