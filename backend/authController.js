@@ -8,7 +8,7 @@ require('dotenv').config();
 
 const { google } = require('googleapis');
 const { OAuth2Client } = require('google-auth-library');
-const client = new OAuth2Client(process.env.CLIENT_ID);
+const client = new OAuth2Client(/*process.env.CLIENT_ID*/"739869680076-jlv9amicing7jf86gasmar79v2hel8vb.apps.googleusercontent.com");
 
 
 const bcryptSalt = bcrypt.genSaltSync(10);
